@@ -66,14 +66,14 @@ def extract_stackoverflow_data(
         page.get(current_url, timeout=25, retry=2, interval=4)
 
         if not wait_for_cookie(page, 'cf_clearance', timeout=15):
-            print(f"[WARN] cf_clearance isn't loaded. Check JS/Cookiesk")
+            print(f"[WARN] 'cf_clearance' cookie isn't loaded. Check that JS/Cookies enabled")
 
         print("[INFO] Wait for target element")
         sample_element = page.ele('.s-post-summary--content-excerpt',
                                   timeout=100)
         if not sample_element:
             print(
-                "\n[FAIL] Could not find elements. Check if the site structure changed or CF 'box' check\n"
+                "\n[FAIL] Could not find elements. Check if the site structure changed or for CloudFlare 'box' check\n"
             )
             return []
         print("\n[SUCCESS] Pattern Identified\n")
