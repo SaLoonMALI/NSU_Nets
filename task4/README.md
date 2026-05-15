@@ -13,7 +13,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
-pip install fastapi uvicorn sqlalchemy psycopg2-binary drissionpage
+pip install -r requirements.txt
 ```
 
 ## How to Run
