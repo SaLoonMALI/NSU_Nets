@@ -1,4 +1,5 @@
 # StackOverflow Scraper API
+# Sam Lunev. 2026. All Rights Reserved
 
 An automated web scraping system built with FastAPI and DrissionPage to extract, store, and export StackOverflow-style question data into a PostgreSQL database.
 
